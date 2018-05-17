@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<section>
+  <div class="container-row produitDiv">
+    <div class="mainImage">
+      <img src="../assets/{{produit.image}}" alt="">
+    </div>
+    <div class="container-row productInfo">
+      <div class="prodDescription">
+        <h1>{{produit.name}}</h1>
+        <p>{{produit.description}}</p>
+      </div>
+      <div class="prodPrice">
+        <h1>{{produit.price}} €</h1>
+        <button (click)="addProduct()">Add</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

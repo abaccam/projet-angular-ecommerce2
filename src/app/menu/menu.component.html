@@ -1,0 +1,32 @@
+<nav>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="smartphones">Smartphones</button>
+</mat-menu>
+
+<mat-menu #smartphones="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="samsung">Samsung</button>
+  <button mat-menu-item [matMenuTriggerFor]="apple">Apple</button>
+  <button mat-menu-item [matMenuTriggerFor]="lg">Lg</button>
+</mat-menu>
+
+<mat-menu #samsung="matMenu">
+  <button mat-menu-item>S9+</button>
+  <button mat-menu-item>S9</button>
+  <button mat-menu-item>S8+</button>
+  <button mat-menu-item>S8</button>
+</mat-menu>
+
+<mat-menu #apple="matMenu">
+  <button mat-menu-item>iPhone X</button>
+  <button mat-menu-item>iPhone 8</button>
+  <button mat-menu-item>iPhone 7</button>
+</mat-menu>
+
+<mat-menu #lg="matMenu">
+  <button mat-menu-item>G6</button>
+  <button mat-menu-item>G5</button>
+  <button mat-menu-item>G4</button>
+</mat-menu>
+</nav>

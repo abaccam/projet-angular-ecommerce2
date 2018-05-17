@@ -1,0 +1,23 @@
+<section>
+  <div class="container-row listeDiv">
+    <div class="container-col produitDiv" *ngFor="let produit of list; index as i">
+      <!-- <div class="container-row ficheProduit"> -->
+
+      <div class="cadreImage">
+        <img src="../assets/{{produit.image}}" alt="">
+      </div>
+      <!-- </div> -->
+      <div>
+        <p>{{produit.name}}</p>
+      </div>
+      <div>
+        <p>{{produit.price}}€</p>
+      </div>
+      <div>
+        <a [routerLink]="['/page-produit/', i+1]">Fiche produit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

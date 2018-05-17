@@ -1,0 +1,20 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produit of panier">
+      <td>{{ produit.id }}</td>
+      <td>{{ produit.image }}</td>
+      <td>{{ produit.name }}</td>
+      <td>{{ produit.price }}</td>
+    </tr>
+  </tbody>
+</table>
+
