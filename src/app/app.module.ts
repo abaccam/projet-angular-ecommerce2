@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RoutesModule } from './routes/routes.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LocalStorageService } from './services/local-storage.service'
 import { AjaxService } from './services/ajax.service'
-
-
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -14,15 +13,13 @@ import { PanierComponent } from './panier/panier.component';
 import { PageProduitComponent } from './page-produit/page-produit.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { NotFoundComponent } from './not-found/not-found.component';
 
 import {MatMenuModule} from '@angular/material/menu';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { RoutesModule } from './routes/routes.module';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +30,8 @@ import { RoutesModule } from './routes/routes.module';
     PageProduitComponent,
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
 section {
   border:3px solid red;
+  margin: 20px;
 }
 
 .listeDiv {
   border:2px solid blue;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   /* align-items: c */
 }
@@ -14,6 +15,7 @@ section {
   width: 220px;
   height: 320px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .cadreImage {
@@ -22,11 +24,12 @@ section {
   height: 50%;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 img {
-  height: 90%;
-  margin-left: 35px;
+  height: 100%;
+  margin-left: 75px;
 }
 
 div p {
