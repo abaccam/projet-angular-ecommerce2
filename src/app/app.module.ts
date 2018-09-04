@@ -20,6 +20,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AccueilComponent } from './accueil/accueil.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    NavbarComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,21 @@
-<section class="container">
-  <div class="container-row listeDiv">
-    <div class="container-col produitDiv" *ngFor="let produit of list; index as i">
-      <!-- <div class="container-row ficheProduit"> -->
 
-      <div class="cadreImage">
-        <img src="../assets/{{produit.image}}" alt="">
-      </div>
-      <!-- </div> -->
-      <div>
-        <p>{{produit.name}}</p>
-      </div>
-     <!-- <div>
-        <p>{{produit.price}}€</p>
-      </div> -->
-      <div>
-        <a [routerLink]="['/page-produit/', i+1]">Fiche produit</a>
+
+
+<section class="container">
+  <!--modifier class container pour pouvoir mettre plus d'element par ligne-->
+    <div class="row test">
+      <div class="card text-center cardSize" style="width: 18rem;" *ngFor="let produit of list; index as i">
+        <div class="imgSize">
+          <img class="card-img-top" style="width:5rem" src="../../assets/{{produit.image}}" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{produit.name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a [routerLink]="['/page-produit/', i+1]" class="btn btn-primary">Fiche produit</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <app-footer></app-footer>
 
