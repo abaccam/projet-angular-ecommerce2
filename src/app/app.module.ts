@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RoutesModule } from './routes/routes.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { LocalStorageService } from './services/local-storage.service'
-import { AjaxService } from './services/ajax.service'
+import { LocalStorageService } from './services/local-storage.service';
+import { AjaxService } from './services/ajax.service';
+import * as $ from 'jquery';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -22,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ConnectionComponent } from './connection/connection.component';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     NotFoundComponent,
     BreadcrumbComponent,
     NavbarComponent,
-    AccueilComponent
+    AccueilComponent,
+    ConnectionComponent
   ],
   imports: [
     BrowserModule,
