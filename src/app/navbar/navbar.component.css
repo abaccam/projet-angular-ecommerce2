@@ -1,4 +1,66 @@
 .navbar-nav {
-  width: 80%;
+  width: 100%;
   justify-content: flex-end;
+}
+
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: rgb(119, 119, 119);
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 0.5s forwards;
+  -webkit-animation: fill 0.5s forwards;
+  -moz-animation: fill 0.5s forwards;
+  opacity: 1;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 5px;
+  }
+  50% {
+    width: 100%;
+    height: 5px;
+  }
+  100% {
+    width: 100%;
+    height: 5px;
+    background: rgb(75, 75, 75);
+  }
+}
+
+.navbar {
+  padding-bottom: 0;
 }

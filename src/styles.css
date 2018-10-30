@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: #f6f0df;
+  background-color: #f7f5bc;
   margin: 0;
   padding: 0;
 }
@@ -32,4 +32,14 @@ body {
 .bottleUnblur:hover {
   -webkit-filter: blur(0px);
   filter: blur(0px);
+}
+
+.btn-primary {
+  background-color: #287930;
+  border-color: #287930;
+}
+
+.btn-primary:hover {
+  background-color: #1a5420;
+  border-color: #1a5420;
 }

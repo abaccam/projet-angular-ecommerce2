@@ -24,6 +24,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ConnectionComponent } from './connection/connection.component';
+import { AppelActionComponent } from './appel-action/appel-action.component';
+import { ContactComponent } from './contact/contact.component';
+import { DevisComponent } from './devis/devis.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { ConnectionComponent } from './connection/connection.component';
     BreadcrumbComponent,
     NavbarComponent,
     AccueilComponent,
-    ConnectionComponent
+    ConnectionComponent,
+    AppelActionComponent,
+    ContactComponent,
+    DevisComponent
   ],
   imports: [
     BrowserModule,

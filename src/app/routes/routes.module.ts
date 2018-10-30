@@ -7,6 +7,8 @@ import { PanierComponent } from '../panier/panier.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { AccueilComponent } from '../accueil/accueil.component';
 import { ConnectionComponent } from '../connection/connection.component';
+import { ContactComponent } from '../contact/contact.component';
+import { DevisComponent } from '../devis/devis.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'liste-produit', component: ListeProduitComponent },
   { path: 'panier', component:  PanierComponent},
   { path: 'connection', component: ConnectionComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'devis', component: DevisComponent },
   { path: '**', component: NotFoundComponent },
 
   

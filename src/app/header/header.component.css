@@ -1,11 +1,33 @@
 header{
-  background-color: #f6efde;
+  background-color: #ffffff;
   margin:0;
   padding: 0;
   /* height: 200px; */
 }
-
+.header-contact {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+  color:#ffffff;
+}
+.header-contact > p{
+ padding: 0px 10px 0px 10px; 
+ margin:0;
+}
+.header-contact a{
+  padding: 0px 10px 0px 10px; 
+}
 img {
-  width: 80%;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+.container-nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
