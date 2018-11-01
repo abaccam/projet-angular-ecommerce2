@@ -9,6 +9,8 @@ import { AccueilComponent } from '../accueil/accueil.component';
 import { ConnectionComponent } from '../connection/connection.component';
 import { ContactComponent } from '../contact/contact.component';
 import { DevisComponent } from '../devis/devis.component';
+import { UserAccountComponent } from '../user-account/user-account.component';
+import { UserUpdateComponent } from '../user-update/user-update.component';
 
 
 const routes: Routes = [
@@ -19,9 +21,9 @@ const routes: Routes = [
   { path: 'connection', component: ConnectionComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'devis', component: DevisComponent },
+  { path: 'mon-compte', component: UserAccountComponent },
+  { path: 'mon-compte/modifier', component: UserUpdateComponent },
   { path: '**', component: NotFoundComponent },
-
-  
 ]
 
 @NgModule({

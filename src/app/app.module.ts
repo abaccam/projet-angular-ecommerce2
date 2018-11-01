@@ -27,6 +27,9 @@ import { ConnectionComponent } from './connection/connection.component';
 import { AppelActionComponent } from './appel-action/appel-action.component';
 import { ContactComponent } from './contact/contact.component';
 import { DevisComponent } from './devis/devis.component';
+import { UserAccountComponent } from './user-account/user-account.component';
+import { UserDataComponent } from './user-data/user-data.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { DevisComponent } from './devis/devis.component';
     ConnectionComponent,
     AppelActionComponent,
     ContactComponent,
-    DevisComponent
+    DevisComponent,
+    UserAccountComponent,
+    UserDataComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,

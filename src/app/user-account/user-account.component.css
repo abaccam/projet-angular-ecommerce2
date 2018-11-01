@@ -1,0 +1,12 @@
+.container-account {
+  border:2px solid red;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  width: 90%;
+}
+
+app-user-update {
+  display:none;
+}

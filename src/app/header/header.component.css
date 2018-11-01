@@ -4,12 +4,17 @@ header{
   padding: 0;
   /* height: 200px; */
 }
+
+a{
+  color: white;
+}
 .header-contact {
   display:flex;
   justify-content: flex-end;
   align-items: center;
   background-color: black;
   color:#ffffff;
+  height: 2rem;
 }
 .header-contact > p{
  padding: 0px 10px 0px 10px; 
