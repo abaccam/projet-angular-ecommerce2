@@ -5,14 +5,37 @@
         <img src="../assets/{{produit.image}}" alt="">
       </div>
     </div>
-    <div class="container-row productInfo">
+    <div class="container-col productInfo">
       <div class="prodDescription">
-        <h1>{{produit.name}}</h1>
-        <p>{{produit.description}}</p>
+        <div>
+          <h4>{{produit.name}}</h4>
+          <!-- <p>{{produit.description}}</p> -->
+          <div>
+              <h5>Le Basil Seed Drink, boisson originale</h5>
+              <p>
+                Le Basil Seed Drink est une boisson de Sawasdee ressemblant au Bubble tea (boisson à base de thé/lait aromatisé et de perles
+                de tapioca originaire de Taïwan). Cette petite bouteille en verre de 290 ml contient des « basil seed », des graines
+                de basilic qui se dilatent dans l’eau ressemblant alors à plein de petits têtards !
+              <p>
+                Les graines sont molles et transparentes avec une consistance ressemblant à des petits litchi épais. Épaisse en bouche, cette
+                boisson est délicieuse et se déguste très fraîche. Elle contient également du sucre, du miel ou des fruits selon
+                les parfums, de l’épaississant et du colorant.
+              </p>
+              <h5>Ses bienfaits</h5>
+              <p>
+                Originaire de Thaïlande, le Basil Seed Drink est aussi très répandu au Japon. Selon la tradition thaïlandaise, cette boisson
+                aide également une personne à perdre du poids. En effet, c’est une boisson assez gourmande en bouche et cela améliore
+                la satiété.
+              </p>
+            </div>
+        </div>
       </div>
       <div class="prodPrice">
-        <h1>{{produit.price}} €</h1>
-        <button (click)="addProduct()">Add</button>
+        <h6>Prix indicatif : {{produit.price}} €</h6>
+        <!-- <button (click)="addProduct()">Demander un devis</button> -->
+        <a routerLink="/devis">
+          <button type="button" class="btn btn-primary" (click)="addProduct()">DEMANDER UN DEVIS</button>
+        </a>
       </div>
     </div>
   </div>
