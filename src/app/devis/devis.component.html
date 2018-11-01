@@ -1,3 +1,49 @@
-<p>
-  devis works!
-</p>
+<section class="container-form">
+
+    <div class="form-block-bg">
+
+        <div class="outer-bg">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="form-block">
+                        <form action="#" method="post">
+                            <h3>DEMANDE DE DEVIS</h3>
+                            <ul>
+                                <li class="name">
+                                    <input name="nom" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Nom'" placeholder="Nom"
+                                    />
+                                </li>
+                                <li class="surname">
+                                    <input name="prenom" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Prenom'" placeholder="Prénom"
+                                    />
+                                </li>
+                                <li class="societe">
+                                    <input name="societe" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Societe'" placeholder="Société"
+                                    />
+                                </li>
+                                <li class="email">
+                                    <input name="email" type="email" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email"/>
+                                </li>
+                                <li class="phone">
+                                    <input name="telephone" type="tel" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='telephone'" placeholder="Téléphone"
+                                    />
+                                </li>
+                                <li>
+                                    <label class="sr-only" for="contact-message">Message</label>
+                                    <textarea name="message" placeholder="Votre demande..." class="contact-message form-control" id="contact-message"></textarea>
+                                </li>
+                                <label for="contact-antispam">Question Antispam : 7 + 5 = ?</label>
+                                <input type="text" name="antispam" placeholder="Réponse..." class="contact-antispam form-control" id="contact-antispam">
+                            </ul>
+                            <div class="btn-out"><a href="#" class="btn">Envoyer</a></div>
+                            <p><a routerLink="">Retour à l'accueil</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
+

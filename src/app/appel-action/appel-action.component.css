@@ -6,6 +6,8 @@
 }
 .left-element{
   width: 73%;
+  display: flex;
+  flex-direction: column;
 }
 .left-element p{
   padding: 1rem;
@@ -21,4 +23,16 @@ background-image: url("../../assets/Mr.-Basil-Basil-Seed-Juice-Drink.jpg");
 width: 28%;
 background-repeat: no-repeat;
 background-size: auto;
+}
+
+@media(max-width:767px){
+  .left-element{
+    width: 100%;
+  }
+  .right-element{
+    display: none;
+  }
+  .container-action {
+    height: 100%;
+  }
 }
