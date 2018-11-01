@@ -30,6 +30,7 @@ import { DevisComponent } from './devis/devis.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
+import { UserDevisComponent } from './user-devis/user-devis.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { UserUpdateComponent } from './user-update/user-update.component';
     DevisComponent,
     UserAccountComponent,
     UserDataComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    UserDevisComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,20 @@
-<div class="container-account">
-
-  <div class="col-md-3">
-    <div class="list-group ">
-      <a routerLink="/mon-compte" class="list-group-item list-group-item-action active" (click)="toggle()">Mon Compte</a>
-      <a href="#" class="list-group-item list-group-item-action">Mes Devis</a>
-    </div>
-  </div>
-  <div class="col-md-5">
-      <app-user-data></app-user-data>
-     <!--<app-user-update></app-user-update>--> 
-  </div>
-
   
+<section class="flex-center">
+  <div class="container-account">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a routerLink="/mon-compte" class="list-group-item list-group-item-action active" (click)="toggle()">Mon Compte</a>
+          <a routerLink="/mon-compte" class="list-group-item list-group-item-action"(click)="toggleDevis()">Mes Devis</a>
+          <a routerLink="" class="list-group-item list-group-item-action">Déconnexion</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+          <app-user-data></app-user-data>
+          <app-user-update></app-user-update>
+          <app-user-devis></app-user-devis>
+      </div>
+    </div>
+</section>
 
-</div>
+<app-footer></app-footer>
+  

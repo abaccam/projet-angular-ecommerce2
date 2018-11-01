@@ -1,0 +1,13 @@
+
+@media(max-width:767px){
+  .offset-4 {
+    margin-left: 0%;
+  }
+  .card {
+    word-wrap: normal;
+  }
+}  
+
+p {
+  margin-top: 7px;
+}  

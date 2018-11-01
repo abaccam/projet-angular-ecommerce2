@@ -1,12 +1,27 @@
+@media(max-width:767px){
+  .container-account {
+    flex-direction: column !important;
+    align-items: center;
+  }  
+}  
+
+.flex-center {
+  display:flex;
+  justify-content: center;
+}
 .container-account {
-  border:2px solid red;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 90%;
 }
 
-app-user-update {
+app-user-update, app-user-devis {
   display:none;
+}
+
+.list-group-item.active {
+  background-color: #1d1d1b;
+  border-color: #1d1d1b;
 }

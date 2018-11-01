@@ -1,6 +1,55 @@
-@media(max-width:767px){
+@media(max-width:1200px){
   .homeView{
     display:none;
+  }
+  .sectionBis {
+    display:flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url('../../assets/Mr.-Basil-Basil-Seed-Juice-Drink_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .homeMessage {
+    background: rgba(32,32,32,.7);
+    color: white;
+    width: 59%;
+    text-align: center;
+    padding: 1rem;
+  }
+  .homeMessage p{
+    font-size: 1rem;
+  }
+}  
+
+@media(max-width:767px){
+  .sectionBis {
+    display:flex !important;
+    height: 300px;
+    background-image: url('../../assets/Mr.-Basil-Basil-Seed-Juice-Drink_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+  }
+  .homeMessage {
+    background:rgba(32,32,32,.8);
+    color:white;
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+  }
+}  
+
+@media(max-width:420px){
+  .homeMessage {
+    background:rgba(32,32,32,.8);
+    color:white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
   }
 }  
 
@@ -10,6 +59,13 @@
   justify-content: center;
 
 } */
+
+h2, h3 {
+  font-weight: bolder;
+}
+.sectionBis {
+  display:none;
+}
 
 img{
  width:12rem;
