@@ -5,7 +5,7 @@
     left: 5% !important;
   }
 } */
-@media(min-width:1420px){
+@media(min-width:1420px) and (max-width:1600px){
   .w--carousel{
     height: 40rem !important;
   }
@@ -15,9 +15,10 @@
   } */
   .bottleRow{
     top: 21rem !important;
-    left: 21% !important;
+    left: 15% !important;
   }
 }
+
 @media(min-width:767px) and (max-width:1200){
   .bottleRow{
     top: 18rem !important;

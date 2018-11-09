@@ -17,7 +17,7 @@ export class AjaxService {
   }
 
   getAllProduit() {
-    return this.httpClient.get<Produit[]>(`http://localhost:3000/produits`).pipe(
+    return this.httpClient.get<Produit[]>(`http://localhost:3004/produits`).pipe(
       tap(value => {
         this.produits = value;
       })
@@ -25,7 +25,7 @@ export class AjaxService {
   }
   
   getProduit(id) {
-    return this.httpClient.get<Produit>(`http://localhost:3000/produits/${id}`).pipe(
+    return this.httpClient.get<Produit>(`http://localhost:3004/produits/${id}`).pipe(
       tap(value => {
         this.localStorageService.setItem(`produit.${id}`, value);
       })

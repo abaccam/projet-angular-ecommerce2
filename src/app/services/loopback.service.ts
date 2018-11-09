@@ -21,8 +21,7 @@ export class LoopbackService {
   /*
     httpBase this one is for local test :
   */
-  httpBase = `https://appli.adaptemonweb.fr:3000/api/profiles`;
-  httpBaseConfig = `https://appli.adaptemonweb.fr:3000/api/siteConfigs`;
+  httpBase = `http://localhost:3000/api/profiles`;
   private getToken() {
     this.token = JSON.parse(localStorage.getItem('token'));
     //console.log('mgServece : token from store : ', this.token);
@@ -83,15 +82,7 @@ export class LoopbackService {
    * @method USER : newUser, login, logout
    */
   newUser(profile) {
-    this.http.post<Profile>(`${this.httpBase}`, profile)
-      .subscribe(
-        (response) => { 
-          //console.log('response post newUser : ', response) 
-        },
-        (error) => { 
-          console.log('Error ! ', error) 
-        }
-      )
+    return this.http.post<Profile>(`${this.httpBase}`, profile);
   }
   login(profile) {
     return this.http.post<Profile>(`${this.httpBase}/login`, profile);
@@ -109,5 +100,9 @@ export class LoopbackService {
     // this.getToken();
     console.log('___-_-_-_-_-_-_-_-_-_-_- sendRequestEmail :', sendRequestEmail);
     return this.http.post(`${this.httpBase}/reset`, sendRequestEmail);
+  }
+  getDevis(id, token){
+    return this.http.get<Object[]>(`${this.httpBase}/${id}/devis/?access_token=${token}`)
+
   }
 }

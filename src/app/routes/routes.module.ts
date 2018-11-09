@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'connection', component: ConnectionComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'devis', component: DevisComponent },
-  { path: 'mon-compte', component: UserAccountComponent },
+  { path: 'mon-compte/:id', component: UserAccountComponent },
   { path: '**', component: NotFoundComponent },
 ]
 

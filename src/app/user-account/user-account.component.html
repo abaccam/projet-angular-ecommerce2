@@ -4,7 +4,7 @@
       <div class="col-md-3">
         <div class="list-group">
           <a routerLink="/mon-compte" class="list-group-item list-group-item-action active" (click)="toggle()">Mon Compte</a>
-          <a routerLink="/mon-compte" class="list-group-item list-group-item-action"(click)="toggleDevis()">Mes Devis</a>
+          <a routerLink="/mon-compte/{{id}}" class="list-group-item list-group-item-action"(click)="toggleDevis()">Mes Devis</a>
           <a routerLink="" class="list-group-item list-group-item-action">Déconnexion</a>
         </div>
       </div>

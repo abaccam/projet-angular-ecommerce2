@@ -26,53 +26,63 @@
             <div class="inner-bg">
                 <div class="container flexForm">
                     <div class="form-block">
-                        <form action="#" method="post">
+                        <!-- <form action="#" method="post"> -->
+                        <form action="#" method="post"  #formSignUp="ngForm" (ngSubmit)="signUp(formSignUp)" id="signup">
                             <h2>S'INSCRIRE</h2>
                             <ul>
-                               <!-- <li class="user">
+                                <!-- <li class="user">
                                     <input name="user" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='User Name'" placeholder="User Name"
                                     />
                                 </li>
                             -->
                                 <li class="email">
                                     <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email"
-                                    />
+                                    ngModel/>
                                 </li>
                                 <li class="password">
                                     <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
-                                    />
+                                    ngModel/>
                                 </li>
                                 <li class="confirmPassword">
-                                    <input name="confirmPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Confirmer le mot de passe'" placeholder="Confirmer le Mot de passe"
-                                    />
+                                    <input name="confirmPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Confirmer le mot de passe'"
+                                        placeholder="Confirmer le Mot de passe" />
                                 </li>
                             </ul>
-                            <div class="btn-out"><a href="#" class="btn">Sign In</a></div>
-                            <p><a routerLink="">Retour à l'accueil</a></p>
+                            <div class="btn-out">
+                                    <input type="submit" class="btn" value="s'incrire'" />
+                            </div>
+                            <p>
+                                <a routerLink="">Retour à l'accueil</a>
+                            </p>
                         </form>
                     </div>
                     <div class="form-block">
-                            <form action="#" method="post">
-                                <h2>CONNEXION</h2>
-                                <ul>
-                                   <!-- <li class="user">
+                        <form action="#" method="post" id="login" #formSignIn="ngForm" (ngSubmit)="signIn(formSignIn)">
+
+                            <h2>CONNEXION</h2>
+                            <ul>
+                                <!-- <li class="user">
                                         <input name="user" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='User Name'" placeholder="User Name"
                                         />
                                     </li>
                                 -->
-                                    <li class="email">
-                                        <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email"
-                                        />
-                                    </li>
-                                    <li class="password">
-                                        <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
-                                        />
-                                    </li>
-                                </ul>
-                                <div class="btn-out"><a href="#" class="btn">Log In</a></div>
-                                <p><a href="#">mot de passe oublié ?</a></p>
-                            </form>
-                        </div>
+                                <li class="email">
+                                    <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email"
+                                        ngModel/>
+                                </li>
+                                <li class="password">
+                                    <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
+                                        ngModel/>
+                                </li>
+                            </ul>
+                            <div class="btn-out">
+                                <input type="submit" class="btn" value="se connecter" />
+                            </div>
+                            <p>
+                                <a href="#">mot de passe oublié ?</a>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,23 +8,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
+      <tr *ngFor="let dev of devis">
+        <th scope="row">{{dev.id}}</th>
         <td>24/02/2018</td>
-        <td>100</td>
-        <td>100 €</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>25/04/2018</td>
-        <td>500</td>
-        <td>450 €</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>04/06/2018</td>
-        <td>2000</td>
-        <td>1800 €</td>
+        <td>{{dev.Quantity}}</td>
+        <td>{{dev.Price}} €</td>
       </tr>
     </tbody>
   </table>

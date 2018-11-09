@@ -9,9 +9,12 @@ export class UserAccountComponent implements OnInit {
 
   constructor() { }
 
+  id:any 
   ngOnInit() {
+    let profile = JSON.parse(localStorage.getItem("profile"))
+    this.id = profile.userId
   }
-
+  
 
   toggle() {
     $('#userData').css({'display': 'block'});

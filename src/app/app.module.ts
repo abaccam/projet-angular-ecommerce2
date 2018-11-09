@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RoutesModule } from './routes/routes.module';
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 // import { CookieService } from 'ngx-cookie-service';
 
 import { LocalStorageService } from './services/local-storage.service';
+import { CompareValidatorDirective } from './shered/compar-validator.directive';
 import { AjaxService } from './services/ajax.service';
 import * as $ from 'jquery';
 
@@ -55,7 +57,8 @@ import { UserDevisComponent } from './user-devis/user-devis.component';
     UserAccountComponent,
     UserDataComponent,
     UserUpdateComponent,
-    UserDevisComponent
+    UserDevisComponent,
+    CompareValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,8 @@ import { UserDevisComponent } from './user-devis/user-devis.component';
     MatButtonModule,
     RoutesModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
     // LocalStorageService,
     // AjaxService
     
