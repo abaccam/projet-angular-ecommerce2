@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RoutesModule } from './routes/routes.module';
 
 import { HttpClientModule } from '@angular/common/http';
+// import { CookieService } from 'ngx-cookie-service';
+
 import { LocalStorageService } from './services/local-storage.service';
 import { AjaxService } from './services/ajax.service';
 import * as $ from 'jquery';
