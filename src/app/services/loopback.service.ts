@@ -87,9 +87,8 @@ export class LoopbackService {
   login(profile) {
     return this.http.post<Profile>(`${this.httpBase}/login`, profile);
   }
-  logout() {
-    this.getToken();
-    return this.http.post(`${this.httpBase}/logout?access_token=${this.token}`, this.responsLoginData).pipe(
+  logout(token) {
+    return this.http.post(`${this.httpBase}/logout?access_token=${token}`, this.responsLoginData).pipe(
       tap(value => {
         localStorage.removeItem('token');
         this.token = null;

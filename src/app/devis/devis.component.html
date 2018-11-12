@@ -22,10 +22,10 @@
                                     />
                                 </li>
                                 <li class="email">
-                                    <input name="email" type="email" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email"/>
+                                    <input name="email" type="email" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"/>
                                 </li>
                                 <li class="phone">
-                                    <input name="telephone" type="tel" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='telephone'" placeholder="Téléphone"
+                                    <input name="telephone" type="tel" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='telephone'" placeholder="Téléphone*"
                                     />
                                 </li>
                                 <li>
@@ -35,7 +35,9 @@
                                 <label for="contact-antispam">Question Antispam : 7 + 5 = ?</label>
                                 <input type="text" name="antispam" placeholder="Réponse..." class="contact-antispam form-control" id="contact-antispam">
                             </ul>
-                            <div class="btn-out"><a href="#" class="btn">Envoyer</a></div>
+                            <div class="btn-out"> <div class="btn-out">
+                                    <input type="submit" class="btn" value="Envoyer" />
+                            </div></div>
                             <p><a routerLink="">Retour à l'accueil</a>
                         </form>
 

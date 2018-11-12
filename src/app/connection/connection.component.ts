@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoopbackService } from '../services/loopback.service';
 import { CompareValidator } from '../shered/compar-validator.directive';
-import { Profile } from '../entities/profile';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../services/local-storage.service';
 import { UserDataService } from '../services/user-data.service';
@@ -18,6 +17,27 @@ export class ConnectionComponent implements OnInit {
   constructor(private loopbackService: LoopbackService, private fb: FormBuilder, private router: Router, private localStorageService: LocalStorageService, private userData: UserDataService) { }
 
   ngOnInit() {
+    this.createRegistrationForm();
+  }
+  formRegister: FormGroup;
+
+  createRegistrationForm(): any {
+    return this.formRegister = this.fb.group({
+      email: [null, Validators.compose([Validators.email, Validators.required])],
+      password: [null, Validators.compose([Validators.minLength(5), Validators.required])],
+      confirmPassword: [null, [Validators.required, CompareValidator('password')]]
+    });
+  }
+  get email() {
+    return this.formRegister.get('email');
+  }
+
+  get password() {
+    return this.formRegister.get('password');
+  }
+
+  get confirmPassword() {
+    return this.formRegister.get('confirmPassword');
   }
 
   signIn(form) {
@@ -38,23 +58,6 @@ export class ConnectionComponent implements OnInit {
     console.log(form.form.value);
     this.loopbackService.newUser(form.form.value).subscribe(value => {
       console.log(value);
-    }
-    )
+    })
   }
-
-  // signIn(form){
-  //   console.log(form);
-  //   this.api.login(form.value).subscribe(value =>
-  //     {console.log(value);
-  //       this.api.getFavs(value["userId"], value["id"]).subscribe(favorite =>
-  //         {
-  //           console.log(favorite);
-
-  //         }
-  //         );
-  //     } 
-
-  //   )
-  // }
-
 }
