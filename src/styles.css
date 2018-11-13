@@ -3,7 +3,13 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 
 
-
+font-face {
+  font-family: "Tiresias";
+  src: url("./assets/Tiresias_Infofont.ttf") format("ttf")
+ }
+body * {
+  font-family: "Tiresias" !important;
+}
 .container {
   display: flex;
 }

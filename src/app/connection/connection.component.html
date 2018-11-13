@@ -27,6 +27,9 @@
                                     <input name="confirmPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Confirmer le mot de passe'"
                                         placeholder="Confirmer le Mot de passe" formControlName="confirmPassword" />
                                 </li>
+                                <span *ngIf="(confirmPassword.invalid) && (confirmPassword.dirty || confirmPassword.touched)">
+                                    Les mots de passe sont différents.
+                                </span>
                             </ul>
                             <div class="btn-out">
                                 <input type="submit" class="btn" value="s'incrire" />
@@ -45,6 +48,9 @@
                                     <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
                                         ngModel/>
                                 </li>
+                                <span *ngIf="(email.dirty || email.touched) && email.invalid">
+                                    Veuillez entrer une adresse email valide.
+                                </span>
                                 <li class="password">
                                     <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
                                         ngModel/>

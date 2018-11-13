@@ -6,13 +6,16 @@
             <div class="inner-bg">
                 <div class="container">
                     <div class="form-block">
-                        <form action="https://formspree.io/mrbasil.contact.eu@yopmail.com" method="post">
+                        <form [formGroup]="formRegister" method="post">
                             <h3>CONTACTEZ-NOUS</h3>
                             <ul>
                                 <li class="email">
                                     <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
-                                    />
+                                    ngModel formControlName="email" />
                                 </li>
+                                <span *ngIf="(email.dirty || email.touched) && email.invalid">
+                                    Veuillez entrer une adresse email valide.
+                                </span>
                                 <li class="subject">
                                     <label class="sr-only" for="contact-subject">Subject</label>
 
@@ -35,4 +38,5 @@
         </div>
     </div>
 </section>
+
 <app-footer></app-footer>

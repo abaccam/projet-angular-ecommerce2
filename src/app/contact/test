@@ -1,0 +1,57 @@
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormContactService } from '../services/form-contact.service';
+import { map } from 'rxjs/operators';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent implements OnInit {
+  emailForm: FormGroup;
+  messageSentSuccess: boolean;
+  messageSentError: boolean;
+  events: any[] = [];
+
+  constructor(
+    private service: FormContactService,
+    private _fb: FormBuilder
+  ) {
+    console.log("test")
+
+    this.emailForm = this._fb.group({
+      'email': [null, Validators.compose([Validators.required])],
+      'message': [null, Validators.compose([Validators.required, Validators.minLength(10)])]
+    });
+
+
+  }
+
+  ngOnInit() {
+  }
+
+  
+  
+
+  onSubmit(form: any) {
+    this.service.postEmail(form.value.email.toString(), form.value.message.toString())
+      .pipe(
+        map(res => res)
+
+      ).subscribe(
+        res => { },
+        error => {
+          this.messageSentError = true;
+          this.emailForm.reset();
+          setTimeout(() => { this.messageSentError = false }, 3000);
+        },
+        () => {
+          this.messageSentSuccess = true;
+          setTimeout(() => { this.messageSentSuccess = false }, 3000);
+        }
+      );
+
+  }
+
+}

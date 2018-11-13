@@ -69,7 +69,8 @@ import { UserDevisComponent } from './user-devis/user-devis.component';
     RoutesModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     // LocalStorageService,
     // AjaxService
     
