@@ -10,10 +10,10 @@
                             <h2>S'INSCRIRE</h2>
                             <ul>
                                 <li class="email">
-                                    <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
+                                    <input (keyup)="messageDisplay()" name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
                                         ngModel formControlName="email" />
                                 </li>
-                                <span *ngIf="(email.dirty || email.touched) && email.invalid">
+                                <span id="signUpSpan" class="" *ngIf="(email.dirty || email.touched) && email.invalid">
                                     Veuillez entrer une adresse email valide.
                                 </span>
                                 <li class="password">
@@ -40,20 +40,20 @@
                         </form>
                     </div>
                     <div class="form-block">
-                        <form action="#" method="post" id="login" #formSignIn="ngForm" (ngSubmit)="signIn(formSignIn)">
+                        <form [formGroup]="formRegister" action="#" method="post" id="login" #formSignIn="ngForm" (ngSubmit)="signIn(formSignIn)">
 
                             <h2>CONNEXION</h2>
                             <ul>
                                 <li class="email">
-                                    <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
-                                        ngModel/>
+                                    <input  (keyup)="messageDisplay()" name="loginEmail" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
+                                        ngModel formControlName="loginEmail"/>
                                 </li>
-                                <span *ngIf="(email.dirty || email.touched) && email.invalid">
+                                <span id="loginSpan" class="" *ngIf="(email.dirty || email.touched) && email.invalid">
                                     Veuillez entrer une adresse email valide.
                                 </span>
                                 <li class="password">
-                                    <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
-                                        ngModel/>
+                                    <input name="loginPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
+                                         />
                                 </li>
                             </ul>
                             <div class="btn-out">
