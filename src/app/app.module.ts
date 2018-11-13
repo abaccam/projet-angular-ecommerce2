@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { CookieService } from 'ngx-cookie-service';
 
 import { LocalStorageService } from './services/local-storage.service';
-import { CompareValidatorDirective } from './shered/compar-validator.directive';
+import { CompareValidatorDirective } from './validator/compar-validator.directive';
 import { AjaxService } from './services/ajax.service';
 import * as $ from 'jquery';
 

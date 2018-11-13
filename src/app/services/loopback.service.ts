@@ -21,7 +21,9 @@ export class LoopbackService {
   /*
     httpBase this one is for local test :
   */
-  httpBase = `http://localhost:3000/api/profiles`;
+  // httpBase = `http://localhost:3000/api/profiles`;
+  httpBase = `http://51.75.207.108:80/api/profiles`;
+
   private getToken() {
     this.token = JSON.parse(localStorage.getItem('token'));
     //console.log('mgServece : token from store : ', this.token);

@@ -13,10 +13,16 @@
                                     <input name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
                                         ngModel formControlName="email" />
                                 </li>
+                                <span *ngIf="(email.dirty || email.touched) && email.invalid">
+                                    Veuillez entrer une adresse email valide.
+                                </span>
                                 <li class="password">
                                     <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
                                         ngModel formControlName="password" />
                                 </li>
+                                <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                    Mot de passe : 5 caractères minimum.
+                                </span>
                                 <li class="confirmPassword">
                                     <input name="confirmPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Confirmer le mot de passe'"
                                         placeholder="Confirmer le Mot de passe" formControlName="confirmPassword" />

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoopbackService } from '../services/loopback.service';
-import { CompareValidator } from '../shered/compar-validator.directive';
+import { CompareValidator } from '../validator/compar-validator.directive';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../services/local-storage.service';
 import { UserDataService } from '../services/user-data.service';
@@ -20,6 +20,8 @@ export class ConnectionComponent implements OnInit {
     this.createRegistrationForm();
   }
   formRegister: FormGroup;
+
+
 
   createRegistrationForm(): any {
     return this.formRegister = this.fb.group({
