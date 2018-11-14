@@ -40,20 +40,18 @@
                         </form>
                     </div>
                     <div class="form-block">
-                        <form [formGroup]="formRegister" action="#" method="post" id="login" #formSignIn="ngForm" (ngSubmit)="signIn(formSignIn)">
+                        <form  action="#" method="post" id="login" #formSignIn="ngForm" (ngSubmit)="signIn(formSignIn)">
 
                             <h2>CONNEXION</h2>
                             <ul>
                                 <li class="email">
-                                    <input  (keyup)="messageDisplay()" name="loginEmail" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
-                                        ngModel formControlName="loginEmail"/>
+                                    <input  (keyup)="messageDisplay()" name="email" type="text" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Email Address'" placeholder="Email*"
+                                       ngModel />
                                 </li>
-                                <span id="loginSpan" class="" *ngIf="(email.dirty || email.touched) && email.invalid">
-                                    Veuillez entrer une adresse email valide.
-                                </span>
+                             
                                 <li class="password">
-                                    <input name="loginPassword" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
-                                         />
+                                    <input name="password" type="password" class="input" onFocus="this.placeholder=''" onBlur="this.placeholder='Password'" placeholder="Mot de passe"
+                                         ngModel/>
                                 </li>
                             </ul>
                             <div class="btn-out">

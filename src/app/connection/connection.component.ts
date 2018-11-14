@@ -28,7 +28,6 @@ export class ConnectionComponent implements OnInit {
       email: [null, Validators.compose([Validators.email, Validators.required])],
       password: [null, Validators.compose([Validators.minLength(5), Validators.required])],
       confirmPassword: [null, [Validators.required, CompareValidator('password')]],
-      loginEmail: [null, Validators.compose([Validators.email, Validators.required])]
     });
   }
   get email() {
@@ -42,9 +41,7 @@ export class ConnectionComponent implements OnInit {
   get confirmPassword() {
     return this.formRegister.get('confirmPassword');
   }
-  get loginEmail() {
-    return this.formRegister.get('loginEmail');
-  }
+
   
 
   signIn(form) {
